@@ -1,0 +1,13 @@
+{
+  "name": "diyresortfree",
+  "version": "1.0.0",
+  "description": "DIY Resort Free - Timeshare Exit Without Expensive Attorneys",
+  "scripts": {
+    "build": "echo 'Static files already built'",
+    "start": "serve -s ."
+  },
+  "keywords": ["timeshare", "exit", "legal", "diy"],
+  "author": "DIY Resort Free",
+  "homepage": "https://diyresortfree.com",
+  "dependencies": {}
+}
