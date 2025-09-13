@@ -1,0 +1,9 @@
+{
+  "name": "diyresortfree",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Files are pre-built, no build step needed'"
+  },
+  "devDependencies": {}
+}
