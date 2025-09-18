@@ -1,203 +1,62 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="diy-resort-free-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DIY RESORT FREE - Timeshare Exit Without Expensive Attorneys</title>
-    <meta name="description" content="Get the same legal strategies attorneys use for just $997 instead of $5,000-$15,000. Over 4,800 successful timeshare exits. 60-day money-back guarantee." />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://diyresortfree.com/" />
-    <meta property="og:title" content="DIY RESORT FREE - Timeshare Exit Without Expensive Attorneys" />
-    <meta property="og:description" content="Get the same legal strategies attorneys use for just $997 instead of $5,000-$15,000. Over 4,800 successful exits." />
-    <meta property="og:image" content="/diy-resort-free-logo.png" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://diyresortfree.com/" />
-    <meta property="twitter:title" content="DIY RESORT FREE - Timeshare Exit Without Expensive Attorneys" />
-    <meta property="twitter:description" content="Get the same legal strategies attorneys use for just $997 instead of $5,000-$15,000. Over 4,800 successful exits." />
-    <meta property="twitter:image" content="/diy-resort-free-logo.png" />
-    
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="assets/index-BHor_K0f.js"></script>
-    <link rel="stylesheet" crossorigin href="assets/index-KOJd-lhw.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-    <!-- AI Video Player - TOP LEFT Position -->
-    <div id="ai-video-player-container" style="position: fixed; top: 80px; left: 20px; z-index: 9998; background: #1D4ED8; border-radius: 15px; padding: 20px; box-shadow: 0 8px 25px rgba(29,78,216,0.4); max-width: 320px; display: none;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h3 style="color: white; margin: 0; font-size: 16px; font-weight: 600;">Expert Video Insights</h3>
-        <button id="close-video-player" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer; opacity: 0.8; padding: 0;">&times;</button>
-      </div>
-      
-      <video id="main-video" width="280" height="158" controls style="border-radius: 10px; margin-bottom: 15px; width: 100%;">
-        <source src="videos/new/welcome_intro_10s.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      
-      <div id="video-tabs" style="display: flex; gap: 8px; margin-bottom: 10px;">
-        <button class="video-tab active" data-video="videos/new/welcome_intro_10s.mp4" style="flex: 1; padding: 8px 12px; background: rgba(255,255,255,0.2); border: none; border-radius: 6px; color: white; font-size: 11px; cursor: pointer; transition: all 0.3s;">Welcome</button>
-        <button class="video-tab" data-video="videos/new/attorney_scam_exposed_10s.mp4" style="flex: 1; padding: 8px 12px; background: rgba(255,255,255,0.1); border: none; border-radius: 6px; color: white; font-size: 11px; cursor: pointer; transition: all 0.3s;">Attorney Scam</button>
-      </div>
-      
-      <div id="video-tabs-2" style="display: flex; gap: 8px;">
-        <button class="video-tab" data-video="videos/new/diy_approach_10s.mp4" style="flex: 1; padding: 8px 12px; background: rgba(255,255,255,0.1); border: none; border-radius: 6px; color: white; font-size: 11px; cursor: pointer; transition: all 0.3s;">DIY Benefits</button>
-        <button class="video-tab" data-video="videos/new/call_to_action_10s.mp4" style="flex: 1; padding: 8px 12px; background: rgba(255,255,255,0.1); border: none; border-radius: 6px; color: white; font-size: 11px; cursor: pointer; transition: all 0.3s;">Join Now</button>
-      </div>
-    </div>
-    
-    <!-- Floating Video Trigger Button - TOP LEFT -->
-    <button id="ai-video-trigger" style="position: fixed; top: 20px; left: 20px; z-index: 9999; background: #1D4ED8; border: none; border-radius: 25px; padding: 12px 20px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(29,78,216,0.3); transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
-      ▶️ Watch Expert Videos
-    </button>
-    
-    <script>
-      // Video Player Logic
-      const trigger = document.getElementById('ai-video-trigger');
-      const container = document.getElementById('ai-video-player-container');
-      const closeBtn = document.getElementById('close-video-player');
-      const video = document.getElementById('main-video');
-      const tabs = document.querySelectorAll('.video-tab');
-      
-      let currentVideoIndex = 0;
-      const videos = [
-        'videos/new/welcome_intro_10s.mp4',
-        'videos/new/attorney_scam_exposed_10s.mp4',
-        'videos/new/diy_approach_10s.mp4',
-        'videos/new/call_to_action_10s.mp4'
-      ];
-      
-      // Show video player
-      trigger.addEventListener('click', () => {
-        container.style.display = 'block';
-        trigger.style.display = 'none';
-        // Add a small delay to ensure video element is ready
-        setTimeout(() => {
-          video.load();
-          video.play().catch(e => console.log('Video autoplay prevented'));
-        }, 100);
-      });
-      
-      // Close video player
-      closeBtn.addEventListener('click', () => {
-        container.style.display = 'none';
-        trigger.style.display = 'flex';
-        video.pause();
-      });
-      
-      // Tab switching
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-          const videoSrc = tab.getAttribute('data-video');
-          video.src = videoSrc;
-          video.load();
-          video.play().catch(e => console.log('Video autoplay prevented'));
-          
-          // Update active tab
-          tabs.forEach(t => {
-            t.style.background = 'rgba(255,255,255,0.1)';
-            t.classList.remove('active');
-          });
-          tab.style.background = 'rgba(255,255,255,0.2)';
-          tab.classList.add('active');
-          
-          currentVideoIndex = videos.findIndex(v => v === videoSrc);
-        });
-      });
-      
-      // Auto-advance to next video
-      video.addEventListener('ended', () => {
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-        const nextTab = Array.from(tabs).find(tab => 
-          tab.getAttribute('data-video') === videos[currentVideoIndex]
-        );
-        if (nextTab) {
-          nextTab.click();
-        }
-      });
-      
-      // Hide MiniMax branding and audio elements
-      function hideBrandingAndAudio() {
-        const elementsToHide = [
-          // MiniMax branding
-          '[class*="minimax"]', '[id*="minimax"]', '[class*="created"]', '[id*="created"]',
-          // Audio elements
-          'audio', '[class*="audio"]', '[id*="audio"]', '[class*="player"]', '[class*="media"]',
-          // Text containing MiniMax or Created by
-          '*'
-        ];
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple Color Emoji'; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s3 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s4 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
+    td.td1 {width: 778.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<div id="video-container" style="width: 100%; max-width: 600px; margin: 20px auto; text-align: center; background-color: #2664EC; padding: 15px; border-radius: 8px;">
+  <video id="video-player" controls style="width: 100%; height: auto; max-height: 400px; border-radius: 4px; background-color: #000;"></video>
+  <div class="video-buttons" style="margin-top: 15px; display: flex; justify-content: space-around; flex-wrap: wrap;">
+    <button data-video-src="path/to/your/video1.mp4" style="background-color: #f0f0f0; color: #2664EC; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: background-color 0.3s;">Welcome</button>
+    <button data-video-src="path/to/your/video2.mp4" style="background-color: #f0f0f0; color: #2664EC; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: background-color 0.3s;">Attorney Scam</button>
+    <button data-video-src="path/to/your/video3.mp4" style="background-color: #f0f0f0; color: #2664EC; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: background-color 0.3s;">DIY Benefits</button>
+    <button data-video-src="path/to/your/video4.mp4" style="background-color: #f0f0f0; color: #2664EC; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: background-color 0.3s;">Join Now</button>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initVideoPlayer();
+    });
+
+    function initVideoPlayer() {
+        const videoPlayer = document.getElementById('video-player');
+        const buttons = document.querySelectorAll('.video-buttons button');
         
-        // Hide by selector
-        elementsToHide.slice(0, -1).forEach(selector => {
-          try {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach(element => {
-              if (!element.closest('#ai-video-player-container') && !element.closest('#ai-video-trigger')) {
-                element.style.display = 'none';
-                if (element.pause && typeof element.pause === 'function') {
-                  element.pause();
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const videoSrc = this.getAttribute('data-video-src');
+                if (videoSrc) {
+                    videoPlayer.src = videoSrc;
+                    videoPlayer.play();
                 }
-              }
             });
-          } catch(e) {
-            // Ignore invalid selectors
-          }
         });
         
-        // Hide elements with MiniMax text content
-        const allElements = document.querySelectorAll('*');
-        allElements.forEach(element => {
-          if (element.textContent && 
-              (element.textContent.toLowerCase().includes('minimax') || 
-               element.textContent.toLowerCase().includes('created by')) &&
-              !element.closest('#ai-video-player-container') && 
-              !element.closest('#ai-video-trigger')) {
-            element.style.display = 'none';
-          }
-        });
-        
-        // Replace audio references with video references
-        const audioTexts = document.querySelectorAll('*');
-        audioTexts.forEach(element => {
-          if (element.textContent && element.children.length === 0) { // Only text nodes
-            if (element.textContent.includes('Audio:')) {
-              element.textContent = element.textContent.replace('Audio:', 'Video:');
-            }
-            if (element.textContent.includes('audio')) {
-              element.textContent = element.textContent.replace(/audio/gi, 'video');
-            }
-            if (element.textContent.includes('Listen to')) {
-              element.textContent = element.textContent.replace('Listen to', 'Watch');
-            }
-            if (element.textContent.includes('Audio Playing Above')) {
-              element.textContent = element.textContent.replace('Audio Playing Above', 'Videos Available Above');
-            }
-          }
-        });
-      }
-      
-      // Run immediately and after React loads
-      hideBrandingAndAudio();
-      setTimeout(hideBrandingAndAudio, 500);
-      setTimeout(hideBrandingAndAudio, 1000);
-      setTimeout(hideBrandingAndAudio, 2000);
-      setTimeout(hideBrandingAndAudio, 3000);
-      
-      // Watch for new DOM additions
-      const observer = new MutationObserver(hideBrandingAndAudio);
-      observer.observe(document.body, { childList: true, subtree: true });
-      
-      // Also run on scroll and resize
-      window.addEventListener('scroll', hideBrandingAndAudio);
-      window.addEventListener('resize', hideBrandingAndAudio);
-    </script>
-  </body>
+        const firstVideoSrc = buttons[0].getAttribute('data-video-src');
+        if (firstVideoSrc) {
+            videoPlayer.src = firstVideoSrc;
+        }
+    }
+</script>
+
+<script src="https://bot.minimax.dev/chatbot.js"></script>
+</body>
 </html>
